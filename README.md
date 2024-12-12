@@ -17,13 +17,13 @@ Secure Backend: Implements Django's built-in security features to prevent vulner
 
 ## Installation
 ### Prerequisites
-1.Python 3.8+
+1. Python 3.8+
 
-2.Django 4.0+
+2. Django 4.0+
 
-3.SQLite (default database for Django)
+3. SQLite (default database for Django)
 
-Steps
+#### Steps
 Clone the repository:
 ```
 git clone https://github.com/ArnavTamrakar/PasswordManager-Django.git
