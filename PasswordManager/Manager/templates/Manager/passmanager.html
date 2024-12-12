@@ -1,0 +1,40 @@
+{% extends 'Manager/base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1>My Saved Passwords</h1>
+
+        {% if messages %}
+            <div class="alert alert-success" role="alert">
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <div class="row">
+            {% for password in passwords %}
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ password.logo }}" class="card-img-top" alt="Logo">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ password.name }}</h5>
+                        <p class="card-text">
+                            <strong>Email:</strong> {{ password.email }}<br>
+                            <strong>Password:</strong> {{ password.password }}<br>
+                        </p>
+                        <div class="action-button">
+                            <!-- Directly show actions without JavaScript -->
+                            <form method="POST" action="{% url 'add_password' %}">
+                                {% csrf_token %}
+                                <input type="hidden" name="password-id" value="{{ password.id }}">
+                                <button type="submit" name="delete" class="btn btn-danger">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
