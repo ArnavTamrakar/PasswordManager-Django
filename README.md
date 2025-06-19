@@ -3,17 +3,15 @@
 The Password Manager is a Django-based web application designed to securely manage and store your passwords. It allows users to create, retrieve, and manage credentials in an organized and secure manner, leveraging Django’s robust framework to ensure data security.
 
 ## Features
-User Authentication: Secure login and registration system to protect your data.
-
-Password Storage: Save and organize multiple credentials under a single user account.
-
-Encryption: Uses Django's security features to encrypt sensitive data.
-
-User-Friendly Interface: Clean and intuitive design for ease of use.
-
-CRUD Operations: Create, read, update, and delete saved credentials.
-
-Secure Backend: Implements Django's built-in security features to prevent vulnerabilities like SQL injection and CSRF attacks.
+- User authentication (sign up, log in, log out)
+- Email verification with code on login
+- Secure password storage (encrypted with Fernet)
+- Add, update, and delete saved passwords
+- Automatic favicon fetching for each website
+- Responsive, modern UI (Bootstrap 5)
+- Copy to clipboard for email and password
+- Show/hide password toggle
+- User-specific data (each user sees only their own passwords)
 
 ## Installation
 ### Prerequisites
